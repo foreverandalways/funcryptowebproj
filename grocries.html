@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<title>Do Only Good Everyday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="stylesheet.css" /> 
+<link rel="stylesheet" type="text/css" href="tables.css" /> 
+<link rel="stylesheet" type="text/css" href="sidenav.css" /> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--NavBar-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://funnygifdan.github.io/funcryptoology/fun.html">Home</a>	
+  <!-- Dropdown -->  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Programming</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="ascii.html">Asciis</a>
+      <a href="binaryToDecimal.html">Binary To Decimal</a>
+      <a href="decToBinary.html">Decimal To Binary</a>
+      <a href="hexadecimal.html">Hexadecimal</a>
+      <a href="grocries.html">Grocries</a>
+  </div>
+  </div>
+</div>
+<div class="parallax"></div>
+
+<div class="header">
+  <div class="topnav">
+    <div class="card">
+      <div class="container">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>  
+  <div>
+<div class="center">Welcome today is: 
+  <p id="date" class="date">
+<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<!--Body--> 
+<body>
+	
+<table>
+	<th>Fruit/Veggies</th>
+</table>
+<table>		
+	<td>Apples</td>
+	<td>Carrots</td>
+	<td>Celery</td>
+	<td>Salad</td>
+	<td>Red Potatoes</td>
+	<td>Shredded Lettuce</td>		
+</table>
+</div>
+<table>
+	<th>Isle</th>	
+</table> 
+<table>
+	<td>Noodles</td>
+	<td>Beef Broth</td>
+	<td>Taco Kit</td>
+	<td>Black Olives</td>
+	<td>Diced Tomatoes</td>
+	<td>Yams</td>
+	<td>Marshmallows</td>
+	<td>Poppy Seed</td>
+	<td>Spaghetti</td>
+	<td>Sauce</td>
+	<td>Pizza Shells</td>
+	<td>Pizza Sauce</td>
+	<td>Mozzaralla Cheese</td>
+	<td>Pepperoni</td>
+	<td>Canned Mushrooms</td>
+</table>
+<table>	
+	<th>Meats</th>
+</table>
+<table>
+	<td>Beef for stew</td>
+	<td>Ham Lunch(meat)</td>
+	<td>Turkey Burger</td>
+	<td>Chicken</td>
+</table>	
+<table>
+	<th>Hygiene</th>
+</table>
+<table>
+	<td>Tooth Paste</td>
+	<td>Tooth Brush</td>
+</table>	
+<table>
+	<th>Household</th>
+</table>
+<table>
+	<td>Dog Food</td>
+	<td>Cat Dog</td>
+	<td>Cleaner</td>
+	<td>Papper Towels</td>
+	<td>Toilet Paper</td>
+</table>	
+<table>	
+	<th>Frozen</th>	
+</table>
+<table>
+	<td>Corn</td>
+	<td>Garlic Bread</td>
+	<td>Veggies</td>
+</table>	
+<table>
+	<th>Bread/Milk</th>
+</table>
+<table>
+	<td>Bread</td>
+	<td>Milk</td>
+	<td>Eggs</td>
+	<td>Hawaiian Rolls</td>
+	<td>Swiss Cheese</td>
+	<td>Sliced Cheese</td>
+	<td>Shredded Cheese</td>
+</table>	
+</div>
+
+<div class="card">
+	<div class="container">
+	<!--Footer-->   
+  <div class="footer">  
+	  <h2>Follow Me</h2>
+	  <a href="https://twitter.com/Funnygifdan">
+		<button style="font-size:24px">Twitter <i class="fa fa-twitter"></i></button>
+	  <a href="https://github.com/Funnygifdan">
+		<button style="font-size:24px">Github <i class="fa fa-github"></i></button>
+  </div>
+  <br>
+  <br>
+  
+  
+  <!--JavaScript-->
+  <script>
+	function openNav() {
+	  document.getElementById("mySidenav").style.width = "250px";
+	  document.getElementById("main").style.marginLeft = "250px";
+	  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	}
+	
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	  document.getElementById("main").style.marginLeft= "0";
+	  document.body.style.backgroundColor = "black";
+	}
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+	document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+	if (!event.target.matches('.dropbtn')) {
+	  var dropdowns = document.getElementsByClassName("dropdown-content");
+	  var i;
+	  for (i = 0; i < dropdowns.length; i++) {
+		var openDropdown = dropdowns[i];
+		if (openDropdown.classList.contains('show')) {
+		  openDropdown.classList.remove('show');
+		}
+	  }
+	}
+  }
+  </script>
+  
+  <script>
+	var d = new Date();
+	document.getElementById("date").innerHTML = d.toDateString();
+	</script>
+  </html>
+  
+  <script>
+	function showTime(){
+	  var date = new Date();
+	  var h = date.getHours(); // 0 - 23
+	  var m = date.getMinutes(); // 0 - 59
+	  var s = date.getSeconds(); // 0 - 59
+	  var session = "AM";
+	  
+	  if(h == 0){
+		  h = 12;
+	  }
+	  
+	  if(h > 12){
+		  h = h - 12;
+		  session = "PM";
+	  }    
+	  h = (h < 10) ? "0" + h : h;
+	  m = (m < 10) ? "0" + m : m;
+	  s = (s < 10) ? "0" + s : s;
+	  
+	  var time = h + ":" + m + ":" + s + " " + session;
+	  document.getElementById("MyClockDisplay").innerText = time;
+	  document.getElementById("MyClockDisplay").textContent = time;
+	  
+	  setTimeout(showTime, 1000);
+	  
+  }
+  
+  showTime();
+  </script>
+  

@@ -1,0 +1,37 @@
+table {
+  background-color: #000000;
+  border-collapse: separate;
+  box-shadow: 1px 1px 1px 1px #fff;
+  line-height: 24px;
+  margin: 30px auto;
+  height: 30px;
+  width: 300px;  
+  text-align: center;
+}
+
+table:hover {
+  box-shadow: 0 8px 16px 0 rgba(105, 255, 4);
+}
+th {  
+  color: rgb(105, 255, 4);
+  border-style: solid;
+  border-color: white;
+  font-size: 16px;
+  font-style: bold;  
+}
+
+td {
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  width: auto;
+  color: (105, 255, 4);
+  font-style: bold; 
+}
+
+
+
+td:hover {background-color: rgb(247, 247, 234);
+color: rgb(0, 0, 0);}
+

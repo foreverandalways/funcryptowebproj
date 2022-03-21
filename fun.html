@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<title>Do Only Good Everyday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="stylesheet.css" /> 
+<link rel="stylesheet" type="text/css" href="sidenav.css" /> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--NavBar-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://funnygifdan.github.io/funcryptoology/fun.html">Home</a>	
+  <!-- Dropdown -->  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Programming</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="ascii.html">Asciis</a>
+      <a href="binaryToDecimal.html">Binary To Decimal</a>
+      <a href="decToBinary.html">Decimal To Binary</a>
+      <a href="hexadecimal.html">Hexadecimal</a>
+      <a href="grocries.html">Grocries</a>
+  </div>
+  </div>
+</div>
+<div class="parallax"></div>
+<!--Body--> 
+<body>
+<div class="topnav">
+  <div class="card">
+    <div class="container">
+      <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>  
+    <h2 class="center">Welcome today is
+      <p id="date" class="date">
+    <div id="MyClockDisplay" class="clock" onload="showTime()">
+    </div>
+    </h2>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="container">
+    <img src="me.jpg" alt="me" class="responsive">
+    <h3 class="center">This is the official page of @funnygifdan, Welcome!</h3><br>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="container">    
+    <h2>Upcoming Pages</h2>
+    <h5>Finish Current Pages</h5>
+    <h5>Crypto Research</h5>
+    <h5>Blog</h5>
+    <h5>Comment Section</h5>    
+  </div>
+</div>
+</body>
+<br>
+<div class="card">
+  <div class="container">
+  <!--Footer-->   
+<div class="footer">  
+    <h2>Follow Me</h2>
+    <a href="https://twitter.com/Funnygifdan">
+      <button style="font-size:24px">Twitter <i class="fa fa-twitter"></i></button>
+    <a href="https://github.com/Funnygifdan">
+      <button style="font-size:24px">Github <i class="fa fa-github"></i></button>
+</div>
+<br>
+<br>
+
+
+<!--JavaScript-->
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "black";
+  }
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<script>
+  var d = new Date();
+  document.getElementById("date").innerHTML = d.toDateString();
+  </script>
+</html>
+
+<script>
+  function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+</script>
